@@ -1,0 +1,159 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $violet;
+  background-image: url(/media/bg/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.nav__container {
+  width: 80%;
+  margin: auto;
+  padding: 3rem 0rem;
+
+  #logo {
+    width: 12rem;
+  }
+}
+
+.intro__container {
+  width: 80%;
+  margin: auto;
+  padding: 3rem 0rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 2;
+  position: relative;
+
+  img {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .register__btn {
+    background-color: white;
+    border: none;
+    border-radius: 28px;
+    color: $violet;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 1rem 6rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: $soft-magenta;
+      color: white;
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .socials {
+    display: inline-flex;
+    position: absolute;
+    bottom: -8rem;
+
+    i {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid white;
+      border-radius: 28px;
+      color: white;
+      font-size: 1.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 0rem 0.4rem;
+
+      &:hover {
+        border: 1px solid $soft-magenta;
+        color: $soft-magenta;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.credits {
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.7em;
+  position: absolute;
+  bottom: -20rem;
+
+  a {
+    color: $soft-magenta;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($soft-magenta, 10);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url(/media/bg/bg-desktop.svg);
+    background-size: cover;
+  }
+
+  .intro__container {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+
+    .intro__text {
+      margin-left: 3rem;
+    }
+
+    img {
+      margin: 0;
+    }
+
+    .register__btn {
+      padding: 1rem 4rem;
+    }
+
+    .socials {
+      bottom: -4rem;
+      right: 0;
+    }
+  }
+}
