@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #674baf;
-  background-image: url("../media/bg/bg-mobile.svg");
+  background-image: url(./media/bg/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   color: white;
@@ -147,7 +147,7 @@ h1 {
 
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("../media/bg/bg-desktop.svg");
+    background-image: url(./media/bg/bg-desktop.svg);
     background-size: cover;
   }
   .intro__container {
